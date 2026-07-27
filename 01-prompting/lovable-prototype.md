@@ -1,29 +1,28 @@
 # Juno PM — Lovable Prototype
 
 ## Lovable share link
-_(paste your Lovable share URL here — e.g. `https://lovable.dev/projects/...`)_
+https://juno-pm-prototype.lovable.app
 
 ## GitHub source code
-_(paste the URL of the GitHub repo you connected from Lovable — e.g. `https://github.com/<you>/juno-pm-prototype`)_
+https://github.com/a7alammar/juno-pm-prototype
 
 > Connecting Lovable to GitHub pushes the React source code to a repo on your account. This means the prototype survives even if you cancel Lovable, and another engineer can fork it. Step 4 of the M1 lab tool walks you through the click-path.
 
 ## What this prototype demonstrates
 - The three-column dashboard: Raw User Transcripts → Structured Insights → Draft PRD
-- The "Process Transcript" interaction triggering a loading state
-- The Sarah / Data-Analyst transcript landing in the Raw Input column
+- The "Process Transcript" interaction triggering a ~1.5s loading state before the middle and right columns populate
+- The Sarah / Data-Analyst transcript landing in the Raw Input column (153 words), then synthesised into ranked insight clusters (Priority + Sentiment tags) and a rendered, evidence-linked Opportunity Brief (v0.1)
 
 ## What it doesn't yet do (the "Beautiful Liar" problem)
-The UI looks production-grade but the AI summary has no real product brain. The CSS export crash gets buried in noise. The bright-blue nav bar gets prioritised over a $50k Mike-Ross blocker. The dark-mode request gets filed as a bug. **Module 1 Section 04 (Prompting as Product Configuration) and the System Prompt Configurator tool fix this.**
+The UI looks production-grade, but the AI summary has no real product brain. Fed Sarah's transcript, Juno ignores what she actually said — the **bright-blue nav bar that "hurts my eyes,"** the **'Export to CSV' crash that costs her hours,** and her **dark-mode request** — and instead returns the same generic Dana/Marco insight set. The real signal gets buried; a scripted output masquerades as synthesis. **Module 1 Section 04 (Prompting as Product Configuration) and the System Prompt Configurator tool fix this.**
 
 ## Screenshots
-_(drop 1–2 screenshots in this folder and reference them here)_
+- `junodashboardempty.png` — awaiting-input state (three columns, persistent Process Transcript button)
+- `junodashboardprocessed.png` — post-synthesis state (4 insight clusters + Opportunity Brief, Draft Ready)
 
 ## Design refinement path used
-_(circle one and add a sentence about why)_
-- Path A · Brand Alignment (uploaded screenshot of …)
-- Path B · Vibe Match (mimicked …)
-- Lovable's built-in Themes only
+- **Lovable's built-in Themes only**  — the Option A "Build Your Own" prompt already specified dark-mode + a single accent colour + three fixed columns, so the base generation met the spec. Skipped a separate Path A/B pass to conserve free-tier credits.
 
 ## Open questions for M2
-- _(what bet does this prove out? what doesn't it prove out yet?)_
+- **What this proves:** the UX shell and the synthesis *workflow* (messy multi-source input → ranked insights → evidence-linked brief) is coherent and desirable.
+- **What it doesn't prove yet:** that an AI can produce *trustworthy* synthesis — as the Sarah run shows, the output is scripted, not model-generated, and misses the real signal. Whether "AI synthesis of messy PM inputs" is a genuine AI-fit bet (vs. dressed-up templating) is exactly what the M2 Decision Matrix pressure-tests.
