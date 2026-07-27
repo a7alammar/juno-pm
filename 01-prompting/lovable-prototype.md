@@ -6,8 +6,6 @@ https://juno-pm-prototype.lovable.app
 ## GitHub source code
 https://github.com/a7alammar/juno-pm-prototype
 
-> Connecting Lovable to GitHub pushes the React source code to a repo on your account. This means the prototype survives even if you cancel Lovable, and another engineer can fork it. Step 4 of the M1 lab tool walks you through the click-path.
-
 ## What this prototype demonstrates
 - The three-column dashboard: Raw User Transcripts → Structured Insights → Draft PRD
 - The "Process Transcript" interaction triggering a ~1.5s loading state before the middle and right columns populate
