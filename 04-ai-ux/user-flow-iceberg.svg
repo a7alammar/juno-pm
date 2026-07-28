@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 1000" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrDark" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#334155"/></marker>
+    <marker id="arrMint" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#10b981"/></marker>
+    <marker id="arrRed" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1120" height="1000" fill="#ffffff"/>
+  <text x="40" y="42" font-size="24" font-weight="700" fill="#0f172a">Juno PM — AI User Flow - The Iceberg</text>
+  <text x="40" y="66" font-size="13" fill="#64748b">Strategic-alignment prioritisation flow - Surface UX / Handshake / Underwater AI workflow</text>
+
+  <!-- BANDS -->
+  <rect x="40" y="84" width="1040" height="184" rx="12" fill="#eaf1fb"/>
+  <text x="58" y="108" font-size="14" font-weight="700" fill="#1e40af" letter-spacing="1">SURFACE · THE USER EXPERIENCE</text>
+
+  <rect x="40" y="276" width="1040" height="150" rx="12" fill="#d7e3f4"/>
+  <text x="58" y="300" font-size="14" font-weight="700" fill="#1e40af" letter-spacing="1">HANDSHAKE · THE CONNECTION LAYER</text>
+
+  <rect x="40" y="434" width="1040" height="452" rx="12" fill="#0e2436"/>
+  <text x="58" y="458" font-size="14" font-weight="700" fill="#7fb3d5" letter-spacing="1">UNDERWATER · THE AI WORKFLOW</text>
+
+  <!-- ================= ARROWS (drawn first, under nodes) ================= -->
+  <!-- Signal -> Breadcrumbs -->
+  <line x1="560" y1="228" x2="560" y2="316" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- Breadcrumbs -> Router -->
+  <line x1="560" y1="392" x2="560" y2="432" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- Router -> RAG (elbow) -->
+  <polyline points="560,543 560,575 200,575 200,600" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- chain horizontals -->
+  <line x1="300" y1="660" x2="352" y2="660" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <line x1="548" y1="660" x2="586" y2="660" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <line x1="782" y1="660" x2="820" y2="660" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- Draft -> Generated output -->
+  <polyline points="925,700 925,740 720,740 720,762" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- Router -> Fail-safe (no doc / below threshold) -->
+  <polyline points="470,510 300,510 300,762" fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrDark)"/>
+  <!-- Generated output -> Presentation (dashed mint up, right gutter) -->
+  <polyline points="800,782 1012,782 1012,150 862,150" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="9 6" marker-end="url(#arrMint)"/>
+  <!-- Fail-safe -> Surface (dashed red up, left gutter) -->
+  <polyline points="180,762 66,762 66,175 70,175" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="9 6" marker-end="url(#arrRed)"/>
+
+  <!-- ================= SURFACE NODES ================= -->
+  <!-- Status badge (dark-blue square) -->
+  <rect x="70" y="122" width="196" height="96" rx="10" fill="#1e3a8a"/>
+  <text x="168" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">STATUS BADGE</text>
+  <text x="168" y="172" text-anchor="middle" font-size="12" fill="#dbeafe">"Juno is reading</text>
+  <text x="168" y="189" text-anchor="middle" font-size="12" fill="#dbeafe">this…"</text>
+  <text x="168" y="207" text-anchor="middle" font-size="10.5" fill="#93c5fd">instant acknowledgement</text>
+
+  <!-- Signal (circle) -->
+  <circle cx="560" cy="176" r="56" fill="#cfe3ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="560" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a5f">SIGNAL</text>
+  <text x="560" y="182" text-anchor="middle" font-size="10.5" fill="#1e3a5f">new P0/P1 in</text>
+  <text x="560" y="197" text-anchor="middle" font-size="10.5" fill="#1e3a5f">#escalations</text>
+
+  <!-- Presentation (dark-blue square) -->
+  <rect x="612" y="122" width="250" height="96" rx="10" fill="#1e3a8a"/>
+  <text x="737" y="148" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">PRESENTATION (inline)</text>
+  <text x="737" y="169" text-anchor="middle" font-size="11.5" fill="#dbeafe">P0–P3 priority cards +</text>
+  <text x="737" y="185" text-anchor="middle" font-size="11.5" fill="#dbeafe">cited clause + source ID</text>
+  <text x="737" y="205" text-anchor="middle" font-size="10.5" fill="#93c5fd">Opportunity Brief in right pane</text>
+
+  <!-- Kill switch (red rect) -->
+  <rect x="884" y="122" width="196" height="96" rx="10" fill="#b91c1c"/>
+  <text x="982" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">KILL SWITCH</text>
+  <text x="982" y="171" text-anchor="middle" font-size="11" fill="#fecaca">Manual Override —</text>
+  <text x="982" y="187" text-anchor="middle" font-size="11" fill="#fecaca">promote / downgrade /</text>
+  <text x="982" y="203" text-anchor="middle" font-size="11" fill="#fecaca">reject before publish</text>
+
+  <!-- ================= HANDSHAKE NODE ================= -->
+  <rect x="286" y="316" width="548" height="76" rx="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="560" y="340" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1e3a5f">BREADCRUMBS — turn the wait into trust</text>
+  <text x="560" y="360" text-anchor="middle" font-size="11" fill="#1e3a5f">"Scanning Strategy One-Pager…" → "Cross-referencing 23 transcripts…"</text>
+  <text x="560" y="377" text-anchor="middle" font-size="11" fill="#1e3a5f">→ "Matching to pillars…" → "Synthesising ranked priorities…"</text>
+
+  <!-- ================= UNDERWATER NODES ================= -->
+  <!-- Router diamond -->
+  <polygon points="560,432 656,487 560,542 464,487" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text x="560" y="480" text-anchor="middle" font-size="12" font-weight="700" fill="#3b2506">ROUTER</text>
+  <text x="560" y="497" text-anchor="middle" font-size="10.5" fill="#3b2506">strategy doc loaded?</text>
+
+  <!-- RAG retrieval diamond -->
+  <polygon points="200,598 302,660 200,722 98,660" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text x="200" y="650" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3b2506">RAG RETRIEVAL</text>
+  <text x="200" y="666" text-anchor="middle" font-size="10" fill="#3b2506">hybrid · Top-K=8</text>
+  <text x="200" y="680" text-anchor="middle" font-size="10" fill="#3b2506">corpus + 90d</text>
+
+  <!-- Map rect -->
+  <rect x="352" y="622" width="196" height="76" rx="10" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="652" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f2544">Map signal → pillar</text>
+  <text x="450" y="672" text-anchor="middle" font-size="10.5" fill="#0f2544">clause match (or "no match")</text>
+
+  <!-- Score rect -->
+  <rect x="586" y="622" width="196" height="76" rx="10" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <text x="684" y="652" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f2544">Score P0–P3</text>
+  <text x="684" y="672" text-anchor="middle" font-size="10.5" fill="#0f2544">alignment × impact</text>
+
+  <!-- Draft rect -->
+  <rect x="820" y="622" width="204" height="76" rx="10" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <text x="922" y="652" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f2544">Draft ranked backlog</text>
+  <text x="922" y="672" text-anchor="middle" font-size="10.5" fill="#0f2544">+ per-item citations</text>
+
+  <!-- Generated output parallelogram -->
+  <polygon points="600,762 850,762 818,824 568,824" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+  <text x="709" y="789" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">GENERATED OUTPUT</text>
+  <text x="709" y="807" text-anchor="middle" font-size="10.5" fill="#1e293b">ranked, cited backlog → surfaces up</text>
+
+  <!-- Fail-safe parallelogram -->
+  <polygon points="150,762 400,762 368,824 118,824" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="259" y="785" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">FAIL-SAFE</text>
+  <text x="259" y="802" text-anchor="middle" font-size="10" fill="#fecaca">cautious mode · confidence N/A</text>
+  <text x="259" y="816" text-anchor="middle" font-size="10" fill="#fecaca">NEEDS CLARIFICATION → human PM</text>
+
+  <!-- arrow path labels -->
+  <text x="1024" y="470" font-size="10" fill="#10b981" transform="rotate(90 1024 470)">result surfaces to user (dashed mint)</text>
+  <text x="52" y="470" font-size="10" fill="#dc2626" transform="rotate(90 52 470)">fail-safe returns control (dashed red)</text>
+
+  <!-- ================= LEGEND ================= -->
+  <text x="40" y="918" font-size="13" font-weight="700" fill="#0f172a">Shape vocabulary</text>
+  <circle cx="60" cy="944" r="10" fill="#cfe3ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="78" y="948" font-size="11.5" fill="#334155">Signal · entry point</text>
+  <rect x="228" y="934" width="20" height="20" rx="4" fill="#1e3a8a"/>
+  <text x="256" y="948" font-size="11.5" fill="#334155">Surface maneuver</text>
+  <rect x="400" y="934" width="20" height="20" rx="4" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="428" y="948" font-size="11.5" fill="#334155">Hidden logic step</text>
+  <polygon points="586,934 602,944 586,954 570,944" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+  <text x="612" y="948" font-size="11.5" fill="#334155">Data flow / RAG / routing</text>
+  <polygon points="800,934 824,934 818,954 794,954" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+  <text x="832" y="948" font-size="11.5" fill="#334155">Generated output</text>
+  <rect x="980" y="934" width="20" height="20" rx="4" fill="#b91c1c"/>
+  <text x="1008" y="948" font-size="11.5" fill="#334155">Fail-safe</text>
+
+  <text x="40" y="982" font-size="11.5" font-style="italic" fill="#475569">Caption: The PM waits a few seconds of visible, narrated work and gets back a ranked P0–P3 backlog where every priority cites the exact strategy clause behind it — judgment scaled, not replaced, with a one-click override and a no-fabrication fail-safe.</text>
+</svg>
