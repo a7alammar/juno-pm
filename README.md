@@ -6,7 +6,7 @@ _Abdulrahman Alammar · AI PM Cohort · July 2026_
 
 Repo: https://github.com/a7alammar/juno-pm
 
-This repo is my final project for the AI Product Management Certification — **Juno PM**. Each module’s artefact lives in its own folder; this README is the dashboard and the pitch.
+This repo is my final project for the AI Product Management Certification — **Juno PM**. Each module's artefact lives in its own folder; this README is the dashboard and the pitch.
 
 ---
 
@@ -15,6 +15,7 @@ This repo is my final project for the AI Product Management Certification — **
 ### M1 · Prompting
 - **System prompt** — [`01-prompting/system-prompt.md`](01-prompting/system-prompt.md)
 - **Lovable prototype** — https://juno-pm-prototype.lovable.app
+- **Prototype write-up** — [`01-prompting/lovable-prototype.md`](01-prompting/lovable-prototype.md) · [source repo](https://github.com/a7alammar/juno-pm-prototype)
 
 ### M2 · Strategy
 - **Decision matrix** — [`02-strategy/decision-matrix.md`](02-strategy/decision-matrix.md)
@@ -25,13 +26,15 @@ This repo is my final project for the AI Product Management Certification — **
 
 ### M4 · AI-Native UX
 - **AI user flow** — [`04-ai-ux/user-flow.md`](04-ai-ux/user-flow.md)
+- **Iceberg diagram** — [`04-ai-ux/user-flow-iceberg.svg`](04-ai-ux/user-flow-iceberg.svg)
 - **Trust-gap mitigations** — [`04-ai-ux/trust-gaps.md`](04-ai-ux/trust-gaps.md)
 
 ### M5 · Agentic Workflows
 - **Agent Workflow Spec (AWSpec)** — [`05-agentic-workflows/awspec.md`](05-agentic-workflows/awspec.md)
+- **Agent graph** — [`05-agentic-workflows/awspec-agent-graph.svg`](05-agentic-workflows/awspec-agent-graph.svg)
 - **Agent Control Panel** — [`05-agentic-workflows/control-panel.md`](05-agentic-workflows/control-panel.md)
 
-### M6 · Evals &amp; Guardrails
+### M6 · Evals & Guardrails
 - **Eval stack** — [`06-evals/eval-stack.md`](06-evals/eval-stack.md)
 - **Human evaluation rubric** — [`06-evals/human-rubric.md`](06-evals/human-rubric.md)
 
@@ -42,7 +45,7 @@ This repo is my final project for the AI Product Management Certification — **
 ### Where Juno is today
 - M1–M6 specced and committed.
 - Lovable prototype live: the three-column workspace validates the V1 flow end to end.
-- RAG backend specced in prd.md but NOT wired — the live evidence engine is unbuilt.
+- RAG backend specced in `prd.md` but NOT wired — the live evidence engine is unbuilt.
 - Eval stack designed (3 layers, cadences, pass bars, named owners); 200-thread golden set defined, not yet curated.
 - Human rubric drafted with 1–5 anchors and a disagreement protocol; no calibration round yet.
 - Trust audit: 3.5/5. Verdict Hold — hallucination and control gaps still open.
