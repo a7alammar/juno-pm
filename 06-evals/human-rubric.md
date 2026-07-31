@@ -37,8 +37,8 @@
 | 5 | As 4, plus proactively escalated a borderline case a human would have wanted flagged. |
 
 ## Sampling & process
-- **Cadence:** 50 P0 triage runs per week, graded in a weekly batch (Friday afternoon).
-- **Sampling:** stratified across confidence buckets (high / mid / low); 100% of hand-off cases included.
+- **Cadence:** 30 P0 triage runs per week (capped), graded in two batches — Tuesday and Friday, ~15 runs each. Split deliberately: a single 50-run weekly batch is ~7 hours of grading and degrades into skimming exactly in the weeks when volume spikes.
+- **Sampling:** stratified across confidence buckets (high / mid / low); 100% of hand-off cases and 100% of PM-override cases included. Override cases are graded first — they are known disagreements between Juno and a human.
 - **Graders:** 2 trained graders per run, PM tiebreak on disagreement.
 - **Disagreement protocol:** if the two graders differ by ≥2 points on any dimension, the PM adjudicates and the case is added to the calibration set.
 - **Calibration:** all graders score the same 10 prototypical runs before their first batch; re-calibrate quarterly to catch rubric drift.
