@@ -1,85 +1,83 @@
-# Juno PM — AI Product Management Certification project template
+# Juno PM — AI Copilot for RocketShip's Product Org
 
-> Fork this repo. Replace this README with your own as you progress through the cohort. By the end of Module 6 this file is your **certification submission**.
+> An AI Associate PM that turns Slack/Notion/Jira chaos into a prioritised top-3 risk list every morning.
 
-You are building **Juno PM** — an AI Associate PM for **RocketShip**, a B2B SaaS platform for Enterprise Data Teams. Juno's job: turn the chaos of P0 escalations, customer threads, and PRDs into a daily prioritised top-3 risk list, with citations and confidence scores.
+_Abdulrahman Alammar · AI PM Cohort · July 2026_
 
-This template gives you one folder per module. Each module pushes a real artifact into it. At the end you finalise this README into a **PM Execution Plan + portfolio piece**.
+Repo: https://github.com/a7alammar/juno-pm
 
----
-
-## How to use this template
-
-1. Click **Use this template** on GitHub (or fork it).
-2. Rename your fork `juno-pm` (or whatever you prefer).
-3. Clone it locally.
-4. In M1, open `01-prompting/` and add your first artifact. Commit + push.
-5. Repeat per module. Each module's slide deck names the file you commit.
-6. At the end of M6, run the **Final Project Deliverables Builder** tool — it generates the finalised README that replaces this one.
-
-> **Submission for certification:** the URL of this fork, within 7 days of cohort end.
+This repo is my final project for the AI Product Management Certification — **Juno PM**. Each module’s artefact lives in its own folder; this README is the dashboard and the pitch.
 
 ---
 
-## The Juno arc — what each module commits
+## Module artefacts
 
-| Module | Folder | What you commit |
-|---|---|---|
-| **M1 — Prompting** | `01-prompting/` | `system-prompt.md` + a Lovable prototype link |
-| **M2 — Strategy** | `02-strategy/` | `decision-matrix.md` + `strategy-one-pager.md` |
-| **M3 — RAG / AI PRD** | `03-rag-prd/` | `prd.md` (with RAG architecture decisions) |
-| **M4 — AI-UX** | `04-ai-ux/` | `user-flow.md` + `trust-gaps.md` |
-| **M5 — Agentic** | `05-agentic-workflows/` | `awspec.md` + `control-panel.md` (+ optional `Juno Agent.json` Langflow lab) |
-| **M6 — Evals** | `06-evals/` | `eval-stack.md` + `human-rubric.md` |
+### M1 · Prompting
+- **System prompt** — [`01-prompting/system-prompt.md`](01-prompting/system-prompt.md)
+- **Lovable prototype** — https://juno-pm-prototype.lovable.app
 
-Every module's tools have a "Copy as markdown" button. Paste the output into the file path above. Self-review. Run the AI-review prompt. Commit. Push.
+### M2 · Strategy
+- **Decision matrix** — [`02-strategy/decision-matrix.md`](02-strategy/decision-matrix.md)
+- **AI Strategy one-pager** — [`02-strategy/strategy-one-pager.md`](02-strategy/strategy-one-pager.md)
 
----
+### M3 · RAG / AI PRD
+- **AI PRD** — [`03-rag-prd/prd.md`](03-rag-prd/prd.md)
 
-## Conventions
+### M4 · AI-Native UX
+- **AI user flow** — [`04-ai-ux/user-flow.md`](04-ai-ux/user-flow.md)
+- **Trust-gap mitigations** — [`04-ai-ux/trust-gaps.md`](04-ai-ux/trust-gaps.md)
 
-- **Markdown for all artifacts.** Slides stay in the course repo; your outputs live here as `.md`.
-- **One commit per artifact.** Use the AI-review prompt as the commit body.
-- **No PII.** This is a public-by-default learning repo. Use only the synthetic RocketShip scenario.
-- **Versioning.** Bump `Version` in each artifact header when you revise.
+### M5 · Agentic Workflows
+- **Agent Workflow Spec (AWSpec)** — [`05-agentic-workflows/awspec.md`](05-agentic-workflows/awspec.md)
+- **Agent Control Panel** — [`05-agentic-workflows/control-panel.md`](05-agentic-workflows/control-panel.md)
 
----
-
-## Folder map
-
-```
-juno-pm/
-├── README.md                              # this file (you'll finalise it at M6)
-├── 01-prompting/
-│   ├── system-prompt.md                   # M1 deliverable
-│   └── lovable-prototype.md               # M1 — link + screenshots
-├── 02-strategy/
-│   ├── decision-matrix.md                 # M2 deliverable
-│   └── strategy-one-pager.md              # M2 deliverable
-├── 03-rag-prd/
-│   └── prd.md                             # M3 deliverable
-├── 04-ai-ux/
-│   ├── user-flow.md                       # M4 deliverable
-│   └── trust-gaps.md                      # M4 deliverable
-├── 05-agentic-workflows/
-│   ├── awspec.md                          # M5 deliverable
-│   ├── control-panel.md                   # M5 deliverable
-│   └── Juno Agent.json                    # M5 optional Langflow starter (provided)
-└── 06-evals/
-    ├── eval-stack.md                      # M6 deliverable
-    └── human-rubric.md                    # M6 deliverable
-```
+### M6 · Evals &amp; Guardrails
+- **Eval stack** — [`06-evals/eval-stack.md`](06-evals/eval-stack.md)
+- **Human evaluation rubric** — [`06-evals/human-rubric.md`](06-evals/human-rubric.md)
 
 ---
 
-## When you finish
+## PM Execution Plan
 
-1. Use `Final Project Deliverables Builder.html` (M6 tool) to generate the **finalised README**.
-2. Replace this file's content with the output.
-3. Commit + push.
-4. (Optional) record a 3-min Loom; post repo URL + Loom in `#ai-pm-cohort`.
-5. Submit the repo URL within 7 days of cohort end.
+### Where Juno is today
+- M1–M6 specced and committed.
+- Lovable prototype live: the three-column workspace validates the V1 flow end to end.
+- RAG backend specced in prd.md but NOT wired — the live evidence engine is unbuilt.
+- Eval stack designed (3 layers, cadences, pass bars, named owners); 200-thread golden set defined, not yet curated.
+- Human rubric drafted with 1–5 anchors and a disagreement protocol; no calibration round yet.
+- Trust audit: 3.5/5. Verdict Hold — hallucination and control gaps still open.
+
+### What ships next (next 2 sprints)
+- Sprint 1: wire the RAG backend (Lovable Cloud + edge function); curate the first 100 golden-set threads; ship the blocking evidence strip that closes the hallucination gap.
+- Sprint 2: closed beta with 3 PMs; wire the eval harness into CI; calibrate 2 graders on 10 prototypical runs; instrument override logging into the weekly human-eval sample.
+
+### What I watch (dashboards)
+- Daily: thumbs-down rate, regenerate rate, hand-off rate, P0 override rate.
+- Weekly: human-rubric mean per dimension (accuracy / citation / safety); evidence-coverage %; cost per run.
+- Per release: golden-set accuracy; format/citation/refusal pass rate; p95 split retrieval vs generation.
+- Monthly: % of P0 decisions reversed within 7 days — the M2 outcome metric.
+
+### Red lines (what blocks shipping)
+- Any confirmed fabricated citation in the last 30 days.
+- <90% golden-set accuracy on the automated layer.
+- Any critical-safety fail (a "1" on the safety dimension in human eval).
+- P0 override rate >20% in a week → auto-posting pauses.
+- P99 latency >5s on the triage flow.
+
+### Governance
+- Compliance: PII scrubber pre-LLM; PII and contract terms never persisted to semantic memory.
+- Safety: refusal on legal / contract / external-comms content; prompt-injection row in the golden set.
+- Reliability: p95 <3s with row-by-row streaming; cautious-mode fallback when retrieval fails.
+- Reputation: Juno never publishes — PM approval gates every write; kill switches on auto-post and on ranking.
 
 ---
 
-_Course: AI Product Management Certification · 6 modules · Individual format · Repo-as-portfolio._
+## Build Insights
+
+- **Friction point.** Free-tier credits ran out mid-RAG-lab — the architecture is specced but the live evidence engine is unbuilt, and the repo says so rather than implying otherwise.
+- **Key learning.** A system prompt is product config, not phrasing — treating it as a spec is how I caught a real contradiction between my guardrails and my refusal rules.
+- **Aha moment.** The prototype looked production-grade and ignored everything the user actually said. Looking trustworthy and being trustworthy are two different products.
+
+---
+
+_Certification submission — AI Product Management Certification._
