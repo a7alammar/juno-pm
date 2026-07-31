@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1030" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="mBlue" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+    <marker id="mRed" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="mAmber" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#d97706"/></marker>
+    <marker id="mLav" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#8b5cf6"/></marker>
+    <marker id="mGreen" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#059669"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="1030" fill="#ffffff"/>
+  <text x="36" y="40" font-size="23" font-weight="700" fill="#0f172a">Juno PM — Agent Workflow Spec (AWSpec) · P0 Triage Agent</text>
+
+  <!-- ===== BANDS ===== -->
+  <rect x="30" y="60" width="1140" height="152" rx="12" fill="#eef2fb"/>
+  <text x="46" y="84" font-size="13" font-weight="700" fill="#1e40af" letter-spacing="1">PILLAR 1 · ACTORS</text>
+
+  <rect x="30" y="228" width="1140" height="150" rx="12" fill="#fdf3e3"/>
+  <text x="46" y="252" font-size="13" font-weight="700" fill="#b45309" letter-spacing="1">PILLAR 2 · PATTERN PLAN — ReAct (reason · act · observe)</text>
+
+  <rect x="30" y="394" width="558" height="430" rx="12" fill="#f2ecfb"/>
+  <text x="46" y="418" font-size="13" font-weight="700" fill="#6d28d9" letter-spacing="1">PILLAR 3 · MEMORY</text>
+
+  <rect x="612" y="394" width="558" height="430" rx="12" fill="#e9faf2"/>
+  <text x="628" y="418" font-size="13" font-weight="700" fill="#047857" letter-spacing="1">PILLAR 4 · TOOLS (read / write scope)</text>
+
+  <rect x="30" y="840" width="1140" height="86" rx="12" fill="#fdeaea" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="46" y="864" font-size="13" font-weight="700" fill="#b91c1c" letter-spacing="1">HUMAN HANDOFF SPEC</text>
+
+  <!-- ===== ARROWS (under nodes) ===== -->
+  <!-- user -> agent (solid blue) -->
+  <line x1="178" y1="146" x2="426" y2="146" stroke="#2563eb" stroke-width="2.6" marker-end="url(#mBlue)"/>
+  <text x="270" y="136" font-size="10.5" fill="#2563eb">user → agent</text>
+  <!-- agent -> HIL (dashed red) -->
+  <line x1="734" y1="146" x2="1002" y2="146" stroke="#dc2626" stroke-width="2.6" stroke-dasharray="8 5" marker-end="url(#mRed)"/>
+  <text x="812" y="136" font-size="10.5" fill="#dc2626">handoff · approve before roadmap</text>
+  <!-- agent -> step1 (amber) -->
+  <polyline points="480,190 480,300 258,300" fill="none" stroke="#d97706" stroke-width="2.4" marker-end="url(#mAmber)"/>
+  <!-- step chain amber -->
+  <line x1="252" y1="330" x2="286" y2="330" stroke="#d97706" stroke-width="2.4" marker-end="url(#mAmber)"/>
+  <line x1="480" y1="330" x2="514" y2="330" stroke="#d97706" stroke-width="2.4" marker-end="url(#mAmber)"/>
+  <line x1="708" y1="330" x2="742" y2="330" stroke="#d97706" stroke-width="2.4" marker-end="url(#mAmber)"/>
+  <line x1="936" y1="330" x2="970" y2="330" stroke="#d97706" stroke-width="2.4" marker-end="url(#mAmber)"/>
+  <!-- observe loop back (dashed amber) -->
+  <path d="M1058,302 C1058,262 150,262 150,302" fill="none" stroke="#d97706" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#mAmber)"/>
+  <text x="560" y="256" font-size="10.5" fill="#b45309">observe · loop (capped)</text>
+  <!-- agent <-> memory (dashed lavender) -->
+  <polyline points="452,190 300,430 300,468" fill="none" stroke="#8b5cf6" stroke-width="2.4" stroke-dasharray="8 5" marker-end="url(#mLav)"/>
+  <text x="316" y="452" font-size="10.5" fill="#7c3aed">agent ↔ memory</text>
+  <!-- agent <-> tools (dashed green) -->
+  <polyline points="720,190 900,430 900,470" fill="none" stroke="#059669" stroke-width="2.4" stroke-dasharray="8 5" marker-end="url(#mGreen)"/>
+  <text x="840" y="452" font-size="10.5" fill="#047857">agent ↔ tools</text>
+
+  <!-- ===== PILLAR 1 NODES ===== -->
+  <!-- Human user circle -->
+  <circle cx="132" cy="146" r="46" fill="#cfe3ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="132" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a5f">HUMAN</text>
+  <text x="132" y="158" text-anchor="middle" font-size="10.5" fill="#1e3a5f">PM user</text>
+  <!-- Primary agent pill -->
+  <rect x="430" y="106" width="304" height="82" rx="41" fill="#0f3d5c"/>
+  <text x="582" y="140" text-anchor="middle" font-size="13.5" font-weight="700" fill="#ffffff">PRIMARY AGENT — Juno</text>
+  <text x="582" y="162" text-anchor="middle" font-size="11" fill="#bae6fd">reason → act → observe (ReAct)</text>
+  <!-- HIL circle -->
+  <circle cx="1050" cy="146" r="46" fill="#fde0e0" stroke="#dc2626" stroke-width="3"/>
+  <text x="1050" y="140" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">HUMAN-IN-</text>
+  <text x="1050" y="156" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7f1d1d">LOOP · approve</text>
+  <!-- Trigger caption -->
+  <text x="582" y="205" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">Trigger: new P0/P1 in #escalations, or an existing thread ≥5 replies / 10 min</text>
+
+  <!-- ===== PILLAR 2 STEPS ===== -->
+  <rect x="52" y="300" width="200" height="60" rx="8" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="152" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">1 · Detect &amp; read</text>
+  <text x="152" y="343" text-anchor="middle" font-size="10" fill="#7c2d12">escalation thread</text>
+
+  <rect x="286" y="300" width="200" height="60" rx="8" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="386" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">2 · Retrieve (RAG)</text>
+  <text x="386" y="343" text-anchor="middle" font-size="10" fill="#7c2d12">corpus + history · K=8</text>
+
+  <rect x="514" y="300" width="194" height="60" rx="8" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="611" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">3 · Map + score</text>
+  <text x="611" y="343" text-anchor="middle" font-size="10" fill="#7c2d12">clause · P0–P3</text>
+
+  <rect x="742" y="300" width="194" height="60" rx="8" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="839" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">4 · Draft entry</text>
+  <text x="839" y="343" text-anchor="middle" font-size="10" fill="#7c2d12">ranked + cited</text>
+
+  <rect x="970" y="300" width="178" height="60" rx="8" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="1059" y="326" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">5 · Surface to PM</text>
+  <text x="1059" y="343" text-anchor="middle" font-size="10" fill="#7c2d12">never auto-publish</text>
+
+  <!-- ===== PILLAR 3 MEMORY (squares) ===== -->
+  <rect x="52" y="470" width="248" height="112" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="66" y="494" font-size="11.5" font-weight="700" fill="#5b21b6">EPISODIC</text>
+  <rect x="196" y="481" width="90" height="18" rx="9" fill="#dcfce7"/><text x="241" y="494" text-anchor="middle" font-size="9.5" fill="#166534">in-scope</text>
+  <text x="66" y="516" font-size="10" fill="#334155">thread · chunks · tool results ·</text>
+  <text x="66" y="531" font-size="10" fill="#334155">scores</text>
+  <text x="66" y="550" font-size="9.5" font-style="italic" fill="#64748b">lifetime: end of run (discarded)</text>
+
+  <rect x="316" y="470" width="256" height="112" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="330" y="494" font-size="11.5" font-weight="700" fill="#5b21b6">SEMANTIC</text>
+  <rect x="452" y="481" width="108" height="18" rx="9" fill="#fef9c3"/><text x="506" y="494" text-anchor="middle" font-size="9.5" fill="#854d0e">in + out</text>
+  <text x="330" y="516" font-size="10" fill="#334155">PM format + approve/reject</text>
+  <text x="330" y="531" font-size="10" fill="#334155">tuning · indefinite</text>
+  <text x="330" y="550" font-size="9.5" font-weight="700" fill="#b91c1c">OUT: no PII / contracts</text>
+
+  <rect x="52" y="596" width="248" height="112" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="66" y="620" font-size="11.5" font-weight="700" fill="#5b21b6">WORKING</text>
+  <rect x="196" y="607" width="90" height="18" rx="9" fill="#dcfce7"/><text x="241" y="620" text-anchor="middle" font-size="9.5" fill="#166534">in-scope</text>
+  <text x="66" y="642" font-size="10" fill="#334155">current thread · escalation ID</text>
+  <text x="66" y="657" font-size="10" fill="#334155">KB chunks · strategy-doc</text>
+  <text x="66" y="672" font-size="10" fill="#334155">version</text>
+
+  <rect x="316" y="596" width="256" height="112" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="330" y="620" font-size="11.5" font-weight="700" fill="#5b21b6">EXTERNAL</text>
+  <rect x="452" y="607" width="108" height="18" rx="9" fill="#dcfce7"/><text x="506" y="620" text-anchor="middle" font-size="9.5" fill="#166534">sources</text>
+  <text x="330" y="642" font-size="10" fill="#334155">Slack (read) · Strategy KB (read)</text>
+  <text x="330" y="657" font-size="10" fill="#334155">Jira (write = draft-only)</text>
+
+  <!-- ===== PILLAR 4 TOOLS (diamonds) ===== -->
+  <!-- read tools green -->
+  <polygon points="708,470 768,512 708,554 648,512" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="708" y="516" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">slack.read</text>
+  <text x="708" y="574" text-anchor="middle" font-size="9.5" fill="#047857">read-only</text>
+
+  <polygon points="908,470 968,512 908,554 848,512" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="908" y="509" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">corpus.</text>
+  <text x="908" y="522" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">retrieve k=8</text>
+  <text x="908" y="574" text-anchor="middle" font-size="9.5" fill="#047857">read-only</text>
+
+  <polygon points="1088,470 1148,512 1088,554 1028,512" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="1088" y="509" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">strategy.</text>
+  <text x="1088" y="522" text-anchor="middle" font-size="9.5" font-weight="700" fill="#065f46">get_doc</text>
+  <text x="1088" y="574" text-anchor="middle" font-size="9.5" fill="#047857">read-only</text>
+
+  <!-- compute tool amber -->
+  <polygon points="790,614 850,656 790,698 730,656" fill="#fde9c8" stroke="#d97706" stroke-width="2"/>
+  <text x="790" y="653" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7c2d12">ranker.</text>
+  <text x="790" y="666" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7c2d12">score</text>
+  <text x="790" y="718" text-anchor="middle" font-size="9.5" fill="#b45309">compute</text>
+
+  <!-- write tool red -->
+  <polygon points="1010,614 1078,656 1010,698 942,656" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="1010" y="653" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7f1d1d">jira.draft_</text>
+  <text x="1010" y="666" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7f1d1d">issue</text>
+  <text x="1010" y="718" text-anchor="middle" font-size="9.5" font-weight="700" fill="#b91c1c">WRITE · draft-only</text>
+
+  <!-- ===== HANDOFF TEXT ===== -->
+  <text x="46" y="888" font-size="11" fill="#7f1d1d">PM approves every ranking before it reaches the roadmap · escalate if confidence &lt; 70% on a P0, or contracts / legal / external comms ·</text>
+  <text x="46" y="908" font-size="11" fill="#7f1d1d">fail-safe: retrieval below threshold → "insufficient evidence" → cautious mode (confidence N/A), never fabricate.</text>
+
+  <!-- ===== LEGEND ===== -->
+  <text x="36" y="962" font-size="12.5" font-weight="700" fill="#0f172a">Legend</text>
+  <circle cx="52" cy="986" r="9" fill="#cfe3ff" stroke="#2563eb" stroke-width="2"/><text x="68" y="990" font-size="10.5" fill="#334155">Human</text>
+  <rect x="150" y="977" width="34" height="18" rx="9" fill="#0f3d5c"/><text x="192" y="990" font-size="10.5" fill="#334155">Agent</text>
+  <rect x="268" y="977" width="20" height="18" rx="4" fill="#fde9c8" stroke="#d97706"/><text x="296" y="990" font-size="10.5" fill="#334155">Pattern step</text>
+  <rect x="408" y="976" width="20" height="20" rx="3" fill="#fff" stroke="#8b5cf6" stroke-width="2"/><text x="436" y="990" font-size="10.5" fill="#334155">Memory</text>
+  <polygon points="548,976 566,986 548,996 530,986" fill="#d1fae5" stroke="#059669"/><text x="576" y="990" font-size="10.5" fill="#334155">Tool</text>
+  <line x1="648" y1="986" x2="686" y2="986" stroke="#2563eb" stroke-width="2.5" marker-end="url(#mBlue)"/><text x="694" y="990" font-size="10" fill="#334155">user→agent</text>
+  <line x1="790" y1="986" x2="828" y2="986" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#mRed)"/><text x="836" y="990" font-size="10" fill="#334155">handoff</text>
+  <line x1="920" y1="986" x2="958" y2="986" stroke="#d97706" stroke-width="2.5" marker-end="url(#mAmber)"/><text x="966" y="990" font-size="10" fill="#334155">step→step</text>
+  <line x1="1060" y1="986" x2="1098" y2="986" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#mLav)"/><text x="1106" y="990" font-size="10" fill="#334155">memory</text>
+
+  <text x="36" y="1020" font-size="11.5" font-style="italic" fill="#475569">Caption: When a P0/P1 escalation lands, Juno runs a capped ReAct loop — retrieve strategy evidence, score and cite a ranked priority — then hands the draft to the PM, who approves before anything touches the roadmap.</text>
+</svg>
